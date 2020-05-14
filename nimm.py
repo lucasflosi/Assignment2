@@ -1,19 +1,18 @@
 """
 File: nimm.py
 -------------------------
-Add your comments here.
+Nimm is a 2 player game where a player can remove either 1 or 2 stones. The player who removes the
+last stone loses the game!
 """
 
-import math
-
-STONES_IN_GAME = 20
+STONES_IN_GAME = 20 #starting quantity for stones
 
 def main():
     stones_left = STONES_IN_GAME
     player_turn = 1
     while stones_left > 0:
         if stones_left != STONES_IN_GAME:
-            print("")
+            print("") #prints a blank on turns after the first turn
         print("There are " + str(stones_left) + " stones left")
         stones_removed = int(input("Player " + str(player_turn) +" would you like to remove 1 or 2 stones? "))
         while input_is_invalid(stones_removed) == False:
